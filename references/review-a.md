@@ -1,5 +1,7 @@
 # `jiaoyuan` 结构化评审 A
 
+> 状态说明：这是一份历史评审记录。其核心建议大部分已被吸收进当前 `SKILL.md`，现在主要作为维护 checklist 与回溯依据使用。
+
 定位：从 `skill-creator` / `auto-skill-optimizer` 视角评审当前 `/Users/drum/.openclaw/workspace/skills/jiaoyuan/SKILL.md`。
 
 ## 总评
