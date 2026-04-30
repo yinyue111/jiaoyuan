@@ -1,16 +1,16 @@
 <div align="center">
 
-# jiaoyuan
+# jiaoyuan.skill
 
-**一个给 agent 用的毛式战略分析 skill。**  
-**A Mao-style strategic analysis skill built for agents.**
+**一个给 agent 用的教员式战略分析 skill。**  
+**A Jiaoyuan-style strategic analysis skill built for agents.**
 
 不是人物 cosplay。  
 不是语录拼盘。  
 不是管理学鸡汤。  
 是一套先分矛盾、再分对象、再分阶段、最后落动作的分析框架。
 
-Not a character cosplay.  
+Not character cosplay.  
 Not a quote scrapbook.  
 Not generic strategy fluff.  
 It is a structured frame for contradiction, actors, phase, and action.
@@ -23,9 +23,9 @@ It is a structured frame for contradiction, actors, phase, and action.
 
 ## 这玩意儿到底干嘛的 / What This Skill Actually Does
 
-`jiaoyuan` 把毛泽东在主要矛盾、对象划分、阶段判断、统一战线、群众动员这些问题上的判断方法，整理成一个可运行的 skill。
+`jiaoyuan.skill` 把教员在主要矛盾、对象划分、阶段判断、统一战线、群众动员这些问题上的判断方法，整理成一个可运行的 skill。
 
-`jiaoyuan` turns Mao-style reasoning on contradiction, actor classification, phase judgment, united front, and mass politics into a runnable skill.
+`jiaoyuan.skill` turns Jiaoyuan-style reasoning on contradiction, actor classification, phase judgment, united front, and mass politics into a runnable skill.
 
 重点不是学口音。
 重点是把回答从一堆情绪和口号里拽出来，先立骨架，再给力度。
@@ -49,8 +49,8 @@ It is about forcing answers to get the structure right before sounding powerful.
   What phase a situation is in
 - 敌人、朋友、中间力量怎么分  
   How to classify enemies, allies, and swing actors
-- 现实议题怎么先做事实底稿，再进角色化判断  
-  How to build a factual brief before switching into voice
+- 现实议题怎么先做事实底稿，再进教员式判断  
+  How to build a factual brief before switching into Jiaoyuan-style judgment
 
 它不适合这些事。
 
@@ -60,7 +60,7 @@ It is about forcing answers to get the structure right before sounding powerful.
   Fabricated quotes, meetings, or events
 - 想把高争议历史后果洗成漂亮口号  
   Sanitizing catastrophic outcomes into slogans
-- 想拿毛式框架当内部肃反、封口、造反式治理手册  
+- 想拿教员式框架当内部肃反、封口、造反式治理手册  
   Using it as a playbook for purges, silencing, or destructive mobilization
 
 ---
@@ -72,7 +72,7 @@ It is about forcing answers to get the structure right before sounding powerful.
 **输入 / Prompt**
 
 ```text
-用毛泽东的视角分析一家创业公司里，创始人与职业经理人的冲突。
+用教员的视角分析一家创业公司里，创始人与职业经理人的冲突。
 ```
 
 **输出风格示例 / Sample Output**
@@ -121,7 +121,7 @@ Find the ugly workflow or ignored user group the big system does not want to tou
 **输入 / Prompt**
 
 ```text
-用毛式方法拆一场公共舆论危机，先别急着道德表态。
+用教员式方法拆一场公共舆论危机，先别急着道德表态。
 ```
 
 **这个 skill 会怎么干 / How The Skill Handles It**
@@ -143,26 +143,26 @@ Find the ugly workflow or ignored user group the big system does not want to tou
 ### 直接触发 / Trigger It Directly
 
 ```text
-用毛泽东的视角看这场组织斗争
+用教员的视角看这场组织斗争
 ```
 
 ```text
-如果按毛式方法拆这个竞争格局，主要矛盾是什么
+如果按教员式方法拆这个竞争格局，主要矛盾是什么
 ```
 
 ```text
-切到毛式视角，帮我判断这家公司现在处在哪个阶段
+切到教员视角，帮我判断这家公司现在处在哪个阶段
 ```
 
 ```text
-Use a Mao-style strategic frame to analyze this coalition and tell me where the real contradiction is.
+Use a Jiaoyuan-style strategic frame to analyze this coalition and tell me where the real contradiction is.
 ```
 
 ### 最小使用路径 / Minimum Path After Install
 
 装完以后，新开一个 session。
 直接扔一个带现实对象的问题进去。
-如果题目涉及具体公司、政策、人物、历史事件，skill 会先走事实底稿，再进毛式判断。
+如果题目涉及具体公司、政策、人物、历史事件，skill 会先走事实底稿，再进教员式判断。
 
 如果你是维护者，最短路径是这样。
 
@@ -202,7 +202,7 @@ Use a Mao-style strategic frame to analyze this coalition and tell me where the 
 - 从个案打穿结构
 - 路线必须落到组织载体和权力形态
 
-它不是把毛泽东写成永远正确。
+它不是把教员写成永远正确。
 相反，它明确保留了不同时期的断裂、代价和争议。
 
 ---
@@ -251,7 +251,7 @@ python3 skills/skill-creator/scripts/package_skill.py skills/jiaoyuan
 它有几条硬约束。
 
 - 先分时期，不把 `1927` 到 `1976` 写成一条平滑直线  
-  It keeps Mao periodized instead of flattening him into one stable character
+  It keeps Jiaoyuan periodized instead of flattening him into one stable character
 - 先分事实题和框架题  
   It separates fact-grounded questions from pure framework questions
 - 事实题先写事实底稿，再进角色化判断  
@@ -290,18 +290,11 @@ python3 skills/skill-creator/scripts/package_skill.py skills/jiaoyuan
 │   └── research/
 │       ├── 01-writings.md
 │       ├── 02-conversations.md
-│       ├── 03-expression-dna.md
-│       ├── 04-external-views.md
-│       ├── 05-decisions.md
-│       ├── 06-timeline.md
-│       ├── 07-primary-source-map.md
-│       ├── 08-high-tension-nodes.md
-│       ├── 09-gap-fill-source-pack.md
-│       ├── 10-cpc-party-history-pack.md
-│       ├── 11-selected-works-full-pass.md
-│       ├── 12-selected-works-vol6-9-and-late-theory.md
-│       ├── 13-current-round-verified-gap-pack.md
-│       └── 14-current-round-merged-gap-map.md
+│       ├── ...
+│       ├── 41-1957-1965-pressure-chain-deep-dive.md
+│       ├── 42-1949-1956-quote-pairs-and-1954-constitution-process.md
+│       ├── 43-skill-round-3-maintenance-note.md
+│       └── 44-youth-1917-1921-hard-entry-followup.md
 └── scripts/
     ├── download_subtitles.sh
     ├── merge_research.py
@@ -316,8 +309,8 @@ python3 skills/skill-creator/scripts/package_skill.py skills/jiaoyuan
 这部分不是装样子。
 是真的分水岭。
 
-- 不伪造毛泽东没说过的话  
-  Do not fabricate quotes Mao never said
+- 不伪造教员没说过的话  
+  Do not fabricate quotes the historical figure never said
 - 不把视角化推演伪装成已证实事实  
   Do not present role-based inference as established fact
 - 碰到高争议历史后果，必须保留代价、断裂和外部批评  
